@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "person"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "firstSurname": {
+      "type": "string"
+    },
+    "secondSurname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "dni": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "dniExpirationDate": {
+      "type": "date"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "F",
+        "M"
+      ]
+    },
+    "province": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "dniFront": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "dniBack": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "ccaa": {
+      "type": "enumeration",
+      "enum": [
+        "Andalucía",
+        "Aragón",
+        "Asturias",
+        "Cantabria",
+        "Castilla-La Mancha",
+        "Castilla y León",
+        "Cataluña",
+        "Extremadura",
+        "Galicia",
+        "Islas Baleares",
+        "Islas Canarias",
+        "La Rioja",
+        "Madrid",
+        "Murcia",
+        "Navarra",
+        "País Vasco",
+        "Valencia"
+      ]
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}

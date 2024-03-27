@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "singularName": "vehicle",
+    "pluralName": "vehicles",
+    "displayName": "vehicle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "kms": {
+      "type": "biginteger"
+    },
+    "registrationDate": {
+      "type": "date"
+    },
+    "plate": {
+      "type": "string"
+    },
+    "vin": {
+      "type": "string"
+    },
+    "currentCirculationPermit": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "newCirculationPermit": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "technicalSheet": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "cc": {
+      "type": "integer"
+    },
+    "fiscalValue": {
+      "type": "float"
+    },
+    "fuel": {
+      "type": "enumeration",
+      "enum": [
+        "Diesel",
+        "Eléctrico",
+        "Gasolina",
+        "Gasolina GLP",
+        "Etanol + Gasolina/Bio",
+        "Híbrido Diesel Eléctrico",
+        "Híbrido Gasolina Eléctrico",
+        "Hidrógeno"
+      ]
+    }
+  }
+}
