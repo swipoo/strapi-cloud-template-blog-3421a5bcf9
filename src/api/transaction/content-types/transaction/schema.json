@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "sellerId": {
-      "type": "uid"
-    },
-    "buyerId": {
-      "type": "uid"
-    },
     "files": {
       "type": "media",
       "multiple": true,
@@ -33,6 +27,31 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::vehicle.vehicle"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment"
+    },
+    "buyerPerson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person"
+    },
+    "sellerPerson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person"
+    },
+    "sellerCompany": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "buyerCompany": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
     }
   }
 }

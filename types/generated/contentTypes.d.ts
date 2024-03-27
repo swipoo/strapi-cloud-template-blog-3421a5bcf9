@@ -788,6 +788,37 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiCommentComment extends Schema.CollectionType {
+  collectionName: 'comments';
+  info: {
+    singularName: 'comment';
+    pluralName: 'comments';
+    displayName: 'comment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comment: Attribute.Text;
+    author: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCompanyCompany extends Schema.CollectionType {
   collectionName: 'companies';
   info: {
@@ -907,13 +938,36 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    sellerId: Attribute.UID;
-    buyerId: Attribute.UID;
     files: Attribute.Media;
     vehicle: Attribute.Relation<
       'api::transaction.transaction',
       'oneToOne',
       'api::vehicle.vehicle'
+    >;
+    comments: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToMany',
+      'api::comment.comment'
+    >;
+    buyerPerson: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToOne',
+      'api::person.person'
+    >;
+    sellerPerson: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToOne',
+      'api::person.person'
+    >;
+    sellerCompany: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToOne',
+      'api::company.company'
+    >;
+    buyerCompany: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToOne',
+      'api::company.company'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1004,6 +1058,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::comment.comment': ApiCommentComment;
       'api::company.company': ApiCompanyCompany;
       'api::person.person': ApiPersonPerson;
       'api::transaction.transaction': ApiTransactionTransaction;
