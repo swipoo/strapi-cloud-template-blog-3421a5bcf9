@@ -794,13 +794,14 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
     pluralName: 'comments';
     displayName: 'comment';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     comment: Attribute.Text;
-    author: Attribute.Email;
+    author: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -993,6 +994,7 @@ export interface ApiVehicleVehicle extends Schema.CollectionType {
     singularName: 'vehicle';
     pluralName: 'vehicles';
     displayName: 'vehicle';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1022,6 +1024,7 @@ export interface ApiVehicleVehicle extends Schema.CollectionType {
         'Hidr\u00F3geno'
       ]
     >;
+    price: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

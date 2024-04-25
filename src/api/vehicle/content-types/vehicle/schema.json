@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vehicle",
     "pluralName": "vehicles",
-    "displayName": "vehicle"
+    "displayName": "vehicle",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,34 +34,37 @@
       "type": "string"
     },
     "currentCirculationPermit": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "newCirculationPermit": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "technicalSheet": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "cc": {
       "type": "integer"
@@ -80,6 +84,9 @@
         "Híbrido Gasolina Eléctrico",
         "Hidrógeno"
       ]
+    },
+    "price": {
+      "type": "decimal"
     }
   }
 }
