@@ -58,14 +58,17 @@
       "enum": [
         "person",
         "company"
-      ]
+      ],
+      "default": "person",
+      "required": false
     },
     "defaultSellerType": {
       "type": "enumeration",
       "enum": [
         "person",
         "company"
-      ]
+      ],
+      "default": "person"
     }
   }
 }
