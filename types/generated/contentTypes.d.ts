@@ -970,6 +970,8 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
       'oneToOne',
       'api::company.company'
     >;
+    defaultBuyerType: Attribute.Enumeration<['person', 'company']>;
+    defaultSellerType: Attribute.Enumeration<['person', 'company']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
