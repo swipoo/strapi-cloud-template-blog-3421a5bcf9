@@ -52,6 +52,20 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::company.company"
+    },
+    "defaultBuyerType": {
+      "type": "enumeration",
+      "enum": [
+        "person",
+        "company"
+      ]
+    },
+    "defaultSellerType": {
+      "type": "enumeration",
+      "enum": [
+        "person",
+        "company"
+      ]
     }
   }
 }
