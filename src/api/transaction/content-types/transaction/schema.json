@@ -12,17 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "files": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "vehicle": {
       "type": "relation",
       "relation": "oneToOne",
@@ -69,6 +58,26 @@
         "company"
       ],
       "default": "person"
+    },
+    "invoice": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "contract": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

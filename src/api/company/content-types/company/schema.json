@@ -48,6 +48,16 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::person.person"
+    },
+    "mandate": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

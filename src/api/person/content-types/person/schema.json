@@ -4,7 +4,8 @@
   "info": {
     "singularName": "person",
     "pluralName": "people",
-    "displayName": "person"
+    "displayName": "person",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -49,24 +50,26 @@
       "type": "string"
     },
     "dniFront": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "dniBack": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "ccaa": {
       "type": "enumeration",
@@ -92,6 +95,16 @@
     },
     "address": {
       "type": "string"
+    },
+    "mandate": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
