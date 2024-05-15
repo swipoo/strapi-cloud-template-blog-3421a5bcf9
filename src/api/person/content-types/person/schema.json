@@ -51,7 +51,7 @@
     },
     "dniFront": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -62,7 +62,7 @@
     },
     "dniBack": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -97,14 +97,18 @@
       "type": "string"
     },
     "mandate": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }

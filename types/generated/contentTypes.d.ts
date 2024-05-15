@@ -912,6 +912,7 @@ export interface ApiPersonPerson extends Schema.CollectionType {
     >;
     address: Attribute.String;
     mandate: Attribute.Media;
+    phone: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
