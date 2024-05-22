@@ -891,23 +891,23 @@ export interface ApiPersonPerson extends Schema.CollectionType {
     dniBack: Attribute.Media;
     ccaa: Attribute.Enumeration<
       [
-        'Andaluc\u00EDa',
-        'Arag\u00F3n',
-        'Asturias',
-        'Cantabria',
-        'Castilla-La Mancha',
-        'Castilla y Le\u00F3n',
-        'Catalu\u00F1a',
-        'Extremadura',
-        'Galicia',
-        'Islas Baleares',
-        'Islas Canarias',
-        'La Rioja',
-        'Madrid',
-        'Murcia',
-        'Navarra',
-        'Pa\u00EDs Vasco',
-        'Valencia'
+        'AN',
+        'AR',
+        'AS',
+        'CB',
+        'CL',
+        'CM',
+        'CN',
+        'CT',
+        'EX',
+        'GA',
+        'IB',
+        'MC',
+        'MD',
+        'NC',
+        'PV',
+        'RI',
+        'VC'
       ]
     >;
     address: Attribute.String;
