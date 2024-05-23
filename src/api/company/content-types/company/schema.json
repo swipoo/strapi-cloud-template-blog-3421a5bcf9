@@ -21,9 +21,6 @@
     "fiscalAddressZipCode": {
       "type": "string"
     },
-    "fiscalAddressState": {
-      "type": "string"
-    },
     "fiscalAddressProvince": {
       "type": "string"
     },
@@ -54,6 +51,28 @@
       "allowedTypes": [
         "images",
         "files"
+      ]
+    },
+    "fiscalAddressState": {
+      "type": "enumeration",
+      "enum": [
+        "AN",
+        "AR",
+        "AS",
+        "CB",
+        "CL",
+        "CM",
+        "CN",
+        "CT",
+        "EX",
+        "GA",
+        "IB",
+        "MC",
+        "MD",
+        "NC",
+        "PV",
+        "RI",
+        "VC"
       ]
     }
   }

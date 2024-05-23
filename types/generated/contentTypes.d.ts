@@ -835,7 +835,6 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
     nif: Attribute.String;
     legalName: Attribute.String;
     fiscalAddressZipCode: Attribute.String;
-    fiscalAddressState: Attribute.String;
     fiscalAddressProvince: Attribute.String;
     fiscalAddressCity: Attribute.String;
     fiscalAddressAddress: Attribute.String;
@@ -846,6 +845,27 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
       'api::person.person'
     >;
     mandate: Attribute.Media;
+    fiscalAddressState: Attribute.Enumeration<
+      [
+        'AN',
+        'AR',
+        'AS',
+        'CB',
+        'CL',
+        'CM',
+        'CN',
+        'CT',
+        'EX',
+        'GA',
+        'IB',
+        'MC',
+        'MD',
+        'NC',
+        'PV',
+        'RI',
+        'VC'
+      ]
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -979,6 +999,7 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
       Attribute.DefaultTo<'person'>;
     invoice: Attribute.Media;
     contract: Attribute.Media;
+    extraFiles: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1016,8 +1037,7 @@ export interface ApiVehicleVehicle extends Schema.CollectionType {
     registrationDate: Attribute.Date;
     plate: Attribute.String;
     vin: Attribute.String;
-    currentCirculationPermit: Attribute.Media;
-    newCirculationPermit: Attribute.Media;
+    circulationPermit: Attribute.Media;
     technicalSheet: Attribute.Media;
     cc: Attribute.Integer;
     fiscalValue: Attribute.Float;

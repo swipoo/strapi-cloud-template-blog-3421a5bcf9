@@ -60,24 +60,34 @@
       "default": "person"
     },
     "invoice": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "contract": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "extraFiles": {
+      "allowedTypes": [
+        "images",
+        "files"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     }
   }
 }

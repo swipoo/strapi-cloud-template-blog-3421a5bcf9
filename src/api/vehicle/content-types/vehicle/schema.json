@@ -33,18 +33,9 @@
     "vin": {
       "type": "string"
     },
-    "currentCirculationPermit": {
+    "circulationPermit": {
       "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "newCirculationPermit": {
-      "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -53,7 +44,7 @@
     },
     "technicalSheet": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
