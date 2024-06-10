@@ -18,12 +18,6 @@
     "model": {
       "type": "string"
     },
-    "version": {
-      "type": "string"
-    },
-    "kms": {
-      "type": "biginteger"
-    },
     "registrationDate": {
       "type": "date"
     },
@@ -54,24 +48,53 @@
     "cc": {
       "type": "integer"
     },
-    "fiscalValue": {
-      "type": "float"
-    },
     "fuel": {
       "type": "enumeration",
       "enum": [
-        "Diesel",
-        "Eléctrico",
-        "Gasolina",
-        "Gasolina GLP",
-        "Etanol + Gasolina/Bio",
-        "Híbrido Diesel Eléctrico",
-        "Híbrido Gasolina Eléctrico",
-        "Hidrógeno"
+        "D",
+        "G",
+        "S",
+        "H",
+        "DyE",
+        "GyE",
+        "Elc",
+        "M"
       ]
     },
     "price": {
       "type": "decimal"
+    },
+    "serviceType": {
+      "type": "enumeration",
+      "enum": [
+        "A00",
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A07",
+        "A08",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16'",
+        "A18",
+        "A20",
+        "B00",
+        "B06",
+        "B09",
+        "B17",
+        "B18",
+        "B19",
+        "B21"
+      ]
+    },
+    "kms": {
+      "type": "integer"
     }
   }
 }
