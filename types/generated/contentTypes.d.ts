@@ -1032,28 +1032,43 @@ export interface ApiVehicleVehicle extends Schema.CollectionType {
   attributes: {
     brand: Attribute.String;
     model: Attribute.String;
-    version: Attribute.String;
-    kms: Attribute.BigInteger;
     registrationDate: Attribute.Date;
     plate: Attribute.String;
     vin: Attribute.String;
     circulationPermit: Attribute.Media;
     technicalSheet: Attribute.Media;
     cc: Attribute.Integer;
-    fiscalValue: Attribute.Float;
-    fuel: Attribute.Enumeration<
+    fuel: Attribute.Enumeration<['D', 'G', 'S', 'H', 'DyE', 'GyE', 'Elc', 'M']>;
+    price: Attribute.Decimal;
+    serviceType: Attribute.Enumeration<
       [
-        'Diesel',
-        'El\u00E9ctrico',
-        'Gasolina',
-        'Gasolina GLP',
-        'Etanol + Gasolina/Bio',
-        'H\u00EDbrido Diesel El\u00E9ctrico',
-        'H\u00EDbrido Gasolina El\u00E9ctrico',
-        'Hidr\u00F3geno'
+        'A00',
+        'A01',
+        'A02',
+        'A03',
+        'A04',
+        'A05',
+        'A07',
+        'A08',
+        'A10',
+        'A11',
+        'A12',
+        'A13',
+        'A14',
+        'A15',
+        "A16'",
+        'A18',
+        'A20',
+        'B00',
+        'B06',
+        'B09',
+        'B17',
+        'B18',
+        'B19',
+        'B21'
       ]
     >;
-    price: Attribute.Decimal;
+    kms: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
